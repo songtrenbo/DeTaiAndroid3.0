@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BuyVoucherFragment"
+    android:background="@drawable/background2">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/txtvoucher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chọn loại voucher"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleGroup"
+            android:layout_below="@id/txtvoucher"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:checkedButton="@id/btnAndroid"
+            app:singleSelection="true">
+
+            <Button
+                android:id="@+id/btnAndroid"
+                style="@style/IconOnlyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Android" />
+
+            <Button
+                android:id="@+id/btniOS"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="iOS" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+        <TextView
+            android:id="@+id/txtprice"
+            android:layout_below="@id/toggleGroup"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chọn mệnh giá"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <GridView
+            android:id="@+id/price_selector"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/txtprice"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:numColumns="3"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:id="@+id/txtlabel"
+            android:layout_below="@id/price_selector"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chọn nhãn hàng"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <GridView
+            android:id="@+id/label_selector"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/txtlabel"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:numColumns="3"
+            android:layout_centerInParent="true"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_selector"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_green"
+            android:text="Mua ngay"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"/>
+    </RelativeLayout>
+
+</FrameLayout>
